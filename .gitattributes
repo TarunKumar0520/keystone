@@ -1,0 +1,3 @@
+# Normalize line endings in the repo; Git converts to CRLF on Windows checkouts as needed.
+* text=auto
+*.pdf binary

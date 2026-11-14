@@ -1,0 +1,7 @@
+# Tool configuration only. Dependencies live in requirements.txt.
+
+[tool.pytest.ini_options]
+# Lets tests `import keystone` without installing the package.
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

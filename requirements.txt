@@ -1,0 +1,14 @@
+# KeyStone dependencies (Python 3.11).
+# Each phase adds only what it needs, so you can see why every package is here.
+# Ranges (not exact pins) keep installs working on new patch releases;
+# run `pip freeze > requirements.lock` once things work if you want exact pins.
+
+# --- Phase 1: API scaffold -------------------------------------------------
+fastapi>=0.115,<1.0          # web framework for the HTTP API
+uvicorn[standard]>=0.30,<1.0 # ASGI server that runs the FastAPI app
+pydantic>=2.7,<3.0           # typed request/response models and config
+python-dotenv>=1.0,<2.0      # loads secrets from .env into environment variables
+
+# --- Dev / testing -----------------------------------------------------------
+pytest>=8.0,<9.0             # test runner (also drives the Phase 6 eval suite)
+httpx2>=2.0,<3.0             # HTTP client FastAPI's TestClient uses (replaces deprecated httpx there)
